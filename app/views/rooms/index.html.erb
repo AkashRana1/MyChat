@@ -29,9 +29,12 @@
               <div class="content-container">  
                 <div class="content">
                   <%= message.content %>
+                  <div class="time-chat">
+                    <%=message.created_at.localtime.strftime("%I:%M%p")%>
+                  </div>
                 </div>
                 <div class="author">
-                  <%= message.user.username %>
+                  <%= message.user.username %> 
                 </div>
               </div>
             </div>
